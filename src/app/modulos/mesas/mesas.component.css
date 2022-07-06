@@ -1,0 +1,10 @@
+#mesa {
+    height: 200px;
+    background-color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    float: left;
+    margin: 10px;
+}

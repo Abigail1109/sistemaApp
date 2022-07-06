@@ -1,0 +1,95 @@
+<!--
+<table *ngIf="productos.length > 0" class="table mt-3 animated fadeIn faster animated fadeIn faster">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of productos; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ producto.nombreProducto }}</td>
+            <td>{{ producto.precio}}</td>
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ producto.nombreProducto }}</h5>
+                    <p class="card-text">{{ producto.precio}}</p>
+                </div>
+            </div>
+        </tr>
+    </tbody>
+</table>-->
+
+
+<div class="container">
+    <h1>
+        Menu Principal</h1>
+    <hr>
+
+    <button (click)="agregar()" class="btn btn-primary ">
+        <i class="fa fa-floppy-o "></i>
+        Guardar
+    </button>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col" style="width: 18rem;" *ngFor="let producto of productos; let i = index">
+            <div class="card">
+                <h5 class="card-title">{{ producto.nombreProducto }}</h5>
+                <img src="../../../assets/img/pozole.png" class="card-img-top" alt="...">
+                <div class="card-body">
+
+                    <button type="button" class="btn btn-outline-primary btn-primary-spacing">Descripción</button>
+
+                    <button type="button" class="btn btn-primary btn-primary-spacing">Personalizar</button>
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="btn-toolbar" role="toolbar">
+                        <button type="button" class="btn btn-default btn-lg" (click)="disminuyeProducto(producto)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-dash-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                              </svg>
+                        </button>
+
+                        <button type="button" class="btn btn-default">
+                            <input type="number" class="form-control form-control-color" [(ngModel)]="producto.cantidad" (ngModelChange)="cambiaCantidad($event)"  value = "0">
+                        </button>
+
+                        <button type="button" class="btn btn-default btn-sm" (click)="aumentaProducto(producto)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                        </button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="border rounded-circle bg-danger ml-5 mt-5" style="width:300px; height:300px">Borde circular</div>
+    <!--
+<div *ngIf="productos.length === 0" class="alert alert-warning text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">No hay registros</h4>
+    <p>
+        <i class="fa fa-exclamation fa-2x"></i>
+    </p>
+</div>
+
+<div *ngIf="cargando" class="alert alert-info text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">Cargando</h4>
+    <p>
+        <i class="fa fa-sync-alt fa-spin fa-2x"></i>
+    </p>
+    <p class="mb-0">
+        Espere por favor
+    </p>
+</div>-->
