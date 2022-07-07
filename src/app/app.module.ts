@@ -7,8 +7,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { InicioComponent } from './modulos/inicio/inicio.component';
 import { MenuPrincipalComponent } from './modulos/menu-principal/menu-principal.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MesasComponent } from './modulos/mesas/mesas.component';
+import { LoginComponent } from './modulos/login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,15 @@ import { MesasComponent } from './modulos/mesas/mesas.component';
     InicioComponent,
     MenuPrincipalComponent,
     MesasComponent,
+    LoginComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

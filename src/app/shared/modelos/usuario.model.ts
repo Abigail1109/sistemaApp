@@ -6,6 +6,7 @@ export class UsuarioModel{
     dateUp    ?: Date;
     rolId     ?: string;
     empleadoId?: string;
+    jwtoken   ?: string;
 
     constructor(){}
 }

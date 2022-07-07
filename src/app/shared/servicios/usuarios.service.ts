@@ -42,7 +42,7 @@ export class UsuariosService {
     return this.http.delete(`${this.url}/usuarios/${usuarioId}`, this.requestOptions);
   }
 
-  login(usuario:UsuarioModel):Observable<UsuarioModel>{
+  login(usuario:UsuarioModel):Observable<any>{
     return this.http.post(`${this.url}/login/`, usuario);
   }
 
