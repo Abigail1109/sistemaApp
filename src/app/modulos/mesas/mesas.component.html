@@ -1,63 +1,43 @@
-<div class="container">
-
-    <h1>
-        Menu Principal</h1>
-
-
-    <div class="border border-success p-2 mb-2">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-
-            <div id="mesa" class="border rounded-circle bg-danger ml-5 mt-5" style="width:100px; height:100px">
-                <h2>1</h2>
+    <div class="col-8 offset-md-2">
+        <div class="row text-center">
+            <h2 class="col-md-4">Mesas</h2>
+            <div class="col-md-4 text-end p3">
+                <button (click)="abrirMenu('0')"
+                    class="btn btn-primary">+ Pedido p/Llevar</button>
             </div>
-            <div id="mesa" class="border rounded-circle bg-danger ml-5 mt-5" style="width:100px; height:100px">
-                <h2>2</h2>
-            </div>
-
-            <div id="mesa" class="border rounded-circle bg-danger ml-5 mt-5" style="width:100px; height:100px">
-                <h2>3</h2>
-            </div>
-
-            <div id="mesa" class="border rounded-circle bg-danger ml-5 mt-5" style="width:100px; height:100px">
-                <h2>4</h2>
+            <div class="col-md-4 text-end p3">
+                <button (click)="abrirMenu('0')"
+                    class="btn btn-primary">+ Pedido p/Pasar a Local</button>
             </div>
         </div>
-
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-
-            <div id="mesa" class="border rounded-circle bg-success ml-5 mt-5" style="width:100px; height:100px">
-                <h2>1</h2>
-            </div>
-            <div id="mesa" class="border rounded-circle bg-success ml-5 mt-5" style="width:100px; height:100px">
-                <h2>2</h2>
-            </div>
-
-            <div id="mesa" class="border rounded-circle bg-success ml-5 mt-5" style="width:100px; height:100px">
-                <h2>3</h2>
-            </div>
-
-            <div id="mesa" class="border rounded-circle bg-success ml-5 mt-5" style="width:100px; height:100px">
-                <h2>4</h2>
+        <div class="card p-3">
+            <h6>Principal</h6>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <button *ngFor="let m of mesas"
+                    class="border rounded-circle ml-5 mt-5 mesa btn" 
+                    style="width:100px; height:100px"
+                    [ngClass]=[getStatus(m.estado)]
+                    (click)="abrirMenu(m._id)"
+                    [disabled]="m.estado=='A'?true:false">
+                    <h2>{{ m.numMesa }}</h2>
+            </button>
             </div>
         </div>
-
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-
-            <div id="mesa" class="border rounded-circle bg-secondary ml-5 mt-5" style="width:100px; height:100px">
-                <h2>1</h2>
-            </div>
-            <div id="mesa" class="border rounded-circle bg-secondary ml-5 mt-5" style="width:100px; height:100px">
-                <h2>2</h2>
-            </div>
-
-            <div id="mesa" class="border rounded-circle bg-secondary ml-5 mt-5" style="width:100px; height:100px">
-                <h2>3</h2>
-            </div>
-
-            <div id="mesa" class="border rounded-circle bg-secondary ml-5 mt-5" style="width:100px; height:100px">
-                <h2>4</h2>
-            </div>
-        </div>
-
     </div>
-</div>
+    <!-- <div class="border border-success p-2 mb-2">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div id="mesa" class="border rounded-circle bg-danger ml-5 mt-5" style="width:100px; height:100px">
+                <h2>1</h2>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div id="mesa" class="border rounded-circle bg-success ml-5 mt-5" style="width:100px; height:100px">
+                <h2>1</h2>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div id="mesa" class="border rounded-circle bg-secondary ml-5 mt-5" style="width:100px; height:100px">
+                <h2>1</h2>
+            </div>
+        </div>
+    </div> -->

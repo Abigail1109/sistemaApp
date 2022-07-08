@@ -1,5 +1,5 @@
 export class MesaModel{
-    mesaId  ?: string;
+    _id  ?: string;
     numMesa ?: number;
     capacidad ?: number;
     estado    ?: string;

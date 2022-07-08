@@ -1,5 +1,5 @@
 export class EmpleadoModel{
-    empleadoId  ?: string;
+    _id         ?: string;
     nombre      ?: string;
     apellidoPat ?: string;
     apellidoMat ?: string;

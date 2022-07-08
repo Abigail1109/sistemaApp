@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuPrincipalModel } from '../../shared/modelos/menuPrincipal.model';
-import { MenuPrincipalService } from '../../shared/servicios/menu-principal.service';
+import { MenuPrincipalModel } from '../../../shared/modelos/menuPrincipal.model';
+import { MenuPrincipalService } from '../../../shared/servicios/menu-principal.service';
 import { Router} from '@angular/router';
 
 @Component({
-  selector: 'app-menu-principal',
-  templateUrl: './menu-principal.component.html',
-  styleUrls: ['./menu-principal.component.css']
+  selector: 'app-menu-carta',
+  templateUrl: './menu-carta.component.html',
+  styleUrls: ['./menu-carta.component.css']
 })
-export class MenuPrincipalComponent implements OnInit {
+export class MenuCartaComponent implements OnInit {
   percent = 20;
 
   productos: MenuPrincipalModel[] = [];

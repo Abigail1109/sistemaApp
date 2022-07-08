@@ -1,5 +1,5 @@
 export class RolModel{
-    rolId   ?: string;
+    _id     ?: string;
     nombre  ?: string;
     descripcion?: string;
     clave   ?: string;

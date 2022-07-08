@@ -26,6 +26,8 @@ export class MesasService {
   }
 
   getMesas():Observable<any>{
+    //console.log(`${this.url}/mesas/`);
+    //console.log(this.requestOptions);
     return this.http.get(`${this.url}/mesas/`, this.requestOptions);
   }
 

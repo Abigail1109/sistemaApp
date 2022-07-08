@@ -1,5 +1,5 @@
 export class CajaModel{
-    cajaId  ?: number;
+    _id  ?: number;
     cambio  ?: number;
     saldo   ?: number;
     usuarioId   ?: string;

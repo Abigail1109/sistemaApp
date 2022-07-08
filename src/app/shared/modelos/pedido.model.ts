@@ -1,5 +1,5 @@
 export class PedidoModel{
-    pedidoId    ?: string;
+    _id         ?: string;
     estatus     ?: string;
     tipoCobro   ?: string;
     subTotal    ?: number;

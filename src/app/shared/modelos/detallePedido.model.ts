@@ -1,5 +1,5 @@
 export class DetallePedidoModel{
-    detallePedidoId ?: string;
+    _id             ?: string;
     cantidad        ?: number;
     precio          ?: number;
     estado          ?: string;

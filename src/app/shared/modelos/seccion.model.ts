@@ -1,5 +1,5 @@
 export class SeccionModel{
-    seccionId?: string;
+    _id      ?: string;
     nombre   ?: string;
     numMesas ?: number;
     descripcion?: string;

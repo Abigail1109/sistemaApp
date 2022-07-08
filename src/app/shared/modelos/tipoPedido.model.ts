@@ -1,5 +1,5 @@
 export class TipoPedidoModel{
-    tipoPedidoId ?: string;
+    _id     ?: string;
     clave   ?: string;
     nombre  ?: string;
     descripcion ?: string;
